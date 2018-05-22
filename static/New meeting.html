@@ -1,0 +1,234 @@
+<div class="right-content">
+    <section class="box-shadow">
+        <h1>New meeting</h1>
+    </section>
+    <div class="right_cont">
+        <div class="page-header clearfix"></div>
+        <div class="panel panel-primary">
+            <div class="panel-body">
+                <form method="POST" action="http://demo.lcrmapp.com/meeting" accept-charset="UTF-8" id="meeting" enctype="multipart/form-data" novalidate="novalidate" class="bv-form">
+                    <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                    <input name="_token" type="hidden" value="fQVZqQ8oROcmY4aRruGMmruuhnPPT67S1nn1UN15">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group required ">
+                                <label for="meeting_subject" class="control-label required">Meeting Subject</label>
+                                <div class="controls">
+                                    <input name="meeting_subject" type="text" id="meeting_subject" class="form-control" data-bv-field="meeting_subject">
+                                    <span class="help-block"></span>
+                                </div>
+                                <small class="help-block" data-bv-validator="notEmpty" data-bv-for="meeting_subject" data-bv-result="NOT_VALIDATED" style="display: none;">The meeting subject field is required.</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group ">
+                                <label for="company_attendees" class="control-label required">Company Attendees</label>
+                                <div class="controls">
+                                    <select multiple="" id="attendees" name="company_attendees[]" class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" data-bv-field="company_attendees[]">
+                                        <option value="5">Customer one </option>
+                                        <option value="7">Customer two </option>
+                                        <option value="9">Customer three </option>
+                                    </select>
+                                    <span class="select2 select2-container select2-container--bootstrap" dir="ltr" style="width: 100%;">
+                                        <span class="selection">
+                                            <span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true"
+                                                aria-expanded="false" tabindex="-1">
+                                                <ul class="select2-selection__rendered">
+                                                    <li class="select2-search select2-search--inline">
+                                                        <input class="select2-search__field" type="search" tabindex="0" autocomplete="off"
+                                                            autocorrect="off" autocapitalize="none" spellcheck="false" role="textbox"
+                                                            aria-autocomplete="list" placeholder="" style="width: 0.75em;">
+                                                    </li>
+                                                </ul>
+                                            </span>
+                                    </span>
+                                    <span class="dropdown-wrapper" aria-hidden="true"></span>
+                                    </span>
+                                    <span class="help-block"></span>
+                                </div>
+                                <small class="help-block" data-bv-validator="notEmpty" data-bv-for="company_attendees[]" data-bv-result="NOT_VALIDATED" style="display: none;">The company attendees field is required.</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group ">
+                                <label for="responsible_id" class="control-label required">Main Staff</label>
+                                <div class="controls">
+                                    <select id="responsible_id" name="responsible_id" class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true" data-bv-field="responsible_id">
+                                        <option value="">Main Staff</option>
+                                        <option value="2">Staff Doe</option>
+                                        <option value="4">Staff one </option>
+                                        <option value="6">Staff two </option>
+                                        <option value="8">Staff three </option>
+                                    </select>
+                                    <span class="select2 select2-container select2-container--bootstrap" dir="ltr" style="width: 513px;">
+                                        <span class="selection">
+                                            <span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                                                aria-expanded="false" tabindex="0" aria-labelledby="select2-responsible_id-container">
+                                                <span class="select2-selection__rendered" id="select2-responsible_id-container">
+                                                    <span class="select2-selection__placeholder">Main Staff</span>
+                                    </span>
+                                    <span class="select2-selection__arrow" role="presentation">
+                                                    <b role="presentation"></b>
+                                                </span>
+                                    </span>
+                                    </span>
+                                    <span class="dropdown-wrapper" aria-hidden="true"></span>
+                                    </span>
+                                    <span class="help-block"></span>
+                                </div>
+                                <small class="help-block" data-bv-validator="notEmpty" data-bv-for="responsible_id" data-bv-result="NOT_VALIDATED" style="display: none;">The main staff field is required.</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group ">
+                                <label for="staff_attendees" class="control-label">Staff Attendees</label>
+                                <div class="controls">
+                                    <select multiple="" id="staff_attendees" name="staff_attendees[]" class="form-control select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                        <option value="">Main Staff</option>
+                                        <option value="2">Staff Doe</option>
+                                        <option value="4">Staff one </option>
+                                        <option value="6">Staff two </option>
+                                        <option value="8">Staff three </option>
+                                    </select>
+                                    <span class="select2 select2-container select2-container--bootstrap" dir="ltr" style="width: 513px;">
+                                        <span class="selection">
+                                            <span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true"
+                                                aria-expanded="false" tabindex="-1">
+                                                <ul class="select2-selection__rendered">
+                                                    <li class="select2-search select2-search--inline">
+                                                        <input class="select2-search__field" type="search" tabindex="0" autocomplete="off"
+                                                            autocorrect="off" autocapitalize="none" spellcheck="false" role="textbox"
+                                                            aria-autocomplete="list" placeholder="Staff Members" style="width: 511px;">
+                                                    </li>
+                                                </ul>
+                                            </span>
+                                    </span>
+                                    <span class="dropdown-wrapper" aria-hidden="true"></span>
+                                    </span>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group required ">
+                                <label for="starting_date" class="control-label required">Starting date</label>
+                                <div class="controls">
+                                    <input name="starting_date" type="text" id="starting_date" class="form-control" data-bv-field="starting_date">
+                                    <span class="help-block"></span>
+                                </div>
+                                <small class="help-block" data-bv-validator="notEmpty" data-bv-for="starting_date" data-bv-result="NOT_VALIDATED" style="display: none;">The starting date field is required.</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group required ">
+                                <label for="ending_date" class="control-label required">Ending date</label>
+                                <div class="controls">
+                                    <input name="ending_date" type="text" id="ending_date" class="form-control" data-bv-field="ending_date">
+                                    <span class="help-block"></span>
+                                </div>
+                                <small class="help-block" data-bv-validator="notEmpty" data-bv-for="ending_date" data-bv-result="NOT_VALIDATED" style="display: none;">The ending date field is required.</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group required ">
+                                <label for="location" class="control-label required">Location</label>
+                                <div class="controls">
+                                    <input name="location" type="text" id="location" class="form-control" data-bv-field="location" autocomplete="off">
+                                    <span class="help-block"></span>
+                                </div>
+                                <small class="help-block" data-bv-validator="notEmpty" data-bv-for="location" data-bv-result="NOT_VALIDATED" style="display: none;">The location field is required.</small>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group required ">
+                                <label for="meeting_description" class="control-label">Meeting description</label>
+                                <div class="controls">
+                                    <textarea name="meeting_description" cols="50" rows="10" id="meeting_description" class="form-control resize_vertical"></textarea>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>
+                                    <div class="icheckbox_minimal-blue" style="position: relative;">
+                                        <input type="checkbox" value="1" name="all_day" id="all_day" class="icheck" style="position: absolute; opacity: 0;">
+                                        <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                    </div>
+                                    All day </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group required ">
+                                <label for="privacy" class="control-label">Privacy</label>
+                                <div class="controls">
+                                    <select id="privacy" name="privacy" class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                        <option value="Everyone">Everyone</option>
+                                        <option value="Only me">Only me</option>
+                                        <option value="Only internal users">Only internal users</option>
+                                    </select>
+                                    <span class="select2 select2-container select2-container--bootstrap" dir="ltr" style="width: 100%;">
+                                        <span class="selection">
+                                            <span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                                                aria-expanded="false" tabindex="0" aria-labelledby="select2-privacy-container">
+                                                <span class="select2-selection__rendered" id="select2-privacy-container" title="Everyone">Everyone</span>
+                                    <span class="select2-selection__arrow" role="presentation">
+                                                    <b role="presentation"></b>
+                                                </span>
+                                    </span>
+                                    </span>
+                                    <span class="dropdown-wrapper" aria-hidden="true"></span>
+                                    </span>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group required ">
+                                <label for="show_time_as" class="control-label">Show Time as</label>
+                                <div class="controls">
+                                    <select id="show_time_as" name="show_time_as" class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                        <option value="Free">Free</option>
+                                        <option value="Busy">Busy</option>
+                                    </select>
+                                    <span class="select2 select2-container select2-container--bootstrap" dir="ltr" style="width: 100%;">
+                                        <span class="selection">
+                                            <span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                                                aria-expanded="false" tabindex="0" aria-labelledby="select2-show_time_as-container">
+                                                <span class="select2-selection__rendered" id="select2-show_time_as-container"
+                                                    title="Free">Free</span>
+                                    <span class="select2-selection__arrow" role="presentation">
+                                                    <b role="presentation"></b>
+                                                </span>
+                                    </span>
+                                    </span>
+                                    <span class="dropdown-wrapper" aria-hidden="true"></span>
+                                    </span>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="controls">
+                            <button type="submit" class="btn btn-success">
+                                <i class="fa fa-check-square-o"></i> OK</button>
+                            <a href="http://demo.lcrmapp.com/meeting" class="btn btn-warning">
+                                <i class="fa fa-arrow-left"></i> Back</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

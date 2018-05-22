@@ -1,0 +1,692 @@
+<div class="right-content">
+    <section class="box-shadow">
+        <h1>Settings</h1>
+    </section>
+    <div class="right_cont">
+        <div xmlns:v-bind="http://symfony.com/schema/routing" class="panel panel-primary">
+            <div class="panel-body">
+                <form method="POST" action="http://demo.lcrmapp.com/setting" accept-charset="UTF-8" enctype="multipart/form-data">
+                    <input name="_token" type="hidden" value="fQVZqQ8oROcmY4aRruGMmruuhnPPT67S1nn1UN15">
+                    <div id="setting_tabs" class="nav-tabs-custom">
+                        <ul id="settings" class="nav nav-tabs Set-list">
+                            <li class="active">
+                                <a href="#general_configuration" data-toggle="tab" title="General configuration">
+                                    <i class="material-icons md-24">build</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#email_configuration" data-toggle="tab" title="Email configuration">
+                                    <i class="material-icons md-24">email</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#payment_configuration" data-toggle="tab" title="Payment configuration">
+                                    <i class="material-icons md-24">attach_money</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#start_number_prefix_configuration" data-toggle="tab" title="Start number prefix configuration">
+                                    <i class="material-icons md-24">settings_applications</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#pusher_configuration" data-toggle="tab" title="Pusher Configuration">
+                                    <i class="material-icons md-24">receipt</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#paypal_settings" data-toggle="tab" title="Paypal settings">
+                                    <i class="material-icons md-24">payment</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#stripe_settings" data-toggle="tab" title="Stripe settings">
+                                    <i class="material-icons md-24">vpn_key</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#backup_configuration" data-toggle="tab" title="Backup Configuration">
+                                    <i class="material-icons md-24">backup</i>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="general_configuration" class="tab-pane active">
+                                <div class="form-group required  ">
+                                    <label for="site_logo_file" class="control-label">Site Logo</label>
+                                    <div class="controls row">
+                                        <div class="col-xs-12">
+                                            <div data-provides="fileinput" class="fileinput fileinput-new">
+                                                <div data-trigger="fileinput" class="fileinput-preview thumbnail form_Blade">
+                                                    <img id="image-preview" width="300" style="display: none;">
+                                                    <img src="data:image/webp;base64,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"
+                                                        alt="Image" data-pagespeed-url-hash="1517847759" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" class="ima-responsive">
+                                                </div>
+                                                <div>
+                                                    <span class="btn btn-default btn-file">
+                                                        <span class="fileinput-new">Select Logo</span>
+                                                    <span class="fileinput-exists">Change</span>
+                                                    <input type="file" name="site_logo_file">
+                                                    </span>
+                                                    <a href="#" data-dismiss="fileinput" class="btn btn-default fileinput-exists">Remove</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <span class="help-block"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group required  ">
+                                    <label for="pdf_logo_file" class="control-label">PDF logo</label>
+                                    <div class="controls row">
+                                        <div class="col-xs-12">
+                                            <div data-provides="fileinput" class="fileinput fileinput-new">
+                                                <div data-trigger="fileinput" class="fileinput-preview thumbnail form_Blade">
+                                                    <img id="image-preview" width="300" style="display: none;">
+                                                    <img src="data:image/webp;base64,UklGRl4AAABXRUJQVlA4TFIAAAAvBUAHEF8wOZMzOYraNmJzHa+SKIwbATwwCmNgPIxBETCKbbvJS+9FQmxEQnZIQAIS8AAu6l/HIgYi+p8bA3XQpejSNLBz/FYNjrDMsM6AM6BZ" alt="Image" data-pagespeed-url-hash="2341035444" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+                                                        class="ima-responsive">
+                                                </div>
+                                                <div>
+                                                    <span class="btn btn-default btn-file">
+                                                        <span class="fileinput-new">Select Logo</span>
+                                                    <span class="fileinput-exists">Change</span>
+                                                    <input type="file" name="pdf_logo_file">
+                                                    </span>
+                                                    <a href="#" data-dismiss="fileinput" class="btn btn-default fileinput-exists">Remove</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <span class="help-block"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="site_name" class="control-label">Site name</label>
+                                    <div class="controls">
+                                        <input name="site_name" type="text" value="LCRM" id="site_name" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="site_name" class="control-label">Address 1</label>
+                                    <div class="controls">
+                                        <input name="address1" type="text" value="" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="address2" class="control-label">Address 2</label>
+                                    <div class="controls">
+                                        <input name="address2" type="text" value="" id="address2" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="site_email" class="control-label">Site email</label>
+                                    <div class="controls">
+                                        <input name="site_email" type="text" value="info@domain.com" id="site_email" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="phone" class="control-label">Phone</label>
+                                    <div class="controls">
+                                        <input name="phone" type="text" value="" id="phone" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="fax" class="control-label">Fax</label>
+                                    <div class="controls">
+                                        <input name="fax" type="text" value="" id="fax" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="currency" class="control-label">Currency</label>
+                                    <div class="controls">
+                                        <select id="currency" name="currency" class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                            <option value="USD" selected="selected">USD</option>
+                                            <option value="EUR">EUR</option>
+                                        </select>
+                                        <span class="select2 select2-container select2-container--bootstrap" dir="ltr" style="width: 100%;">
+                                            <span class="selection">
+                                                <span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                                                    aria-expanded="false" tabindex="0" aria-labelledby="select2-currency-container">
+                                                    <span class="select2-selection__rendered" id="select2-currency-container"
+                                                        title="USD">USD</span>
+                                        <span class="select2-selection__arrow" role="presentation">
+                                                        <b role="presentation"></b>
+                                                    </span>
+                                        </span>
+                                        </span>
+                                        <span class="dropdown-wrapper" aria-hidden="true"></span>
+                                        </span>
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="currency" class="control-label">Currency position</label>
+                                    <div class="controls">
+                                        <select id="currency_position" name="currency_position" class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                            <option value="left">Left</option>
+                                            <option value="right" selected="selected">Right</option>
+                                        </select>
+                                        <span class="select2 select2-container select2-container--bootstrap" dir="ltr" style="width: 100%;">
+                                            <span class="selection">
+                                                <span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                                                    aria-expanded="false" tabindex="0" aria-labelledby="select2-currency_position-container">
+                                                    <span class="select2-selection__rendered" id="select2-currency_position-container"
+                                                        title="Right">Right</span>
+                                        <span class="select2-selection__arrow" role="presentation">
+                                                        <b role="presentation"></b>
+                                                    </span>
+                                        </span>
+                                        </span>
+                                        <span class="dropdown-wrapper" aria-hidden="true"></span>
+                                        </span>
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="allowed_extensions" class="control-label">Allowed file extensions</label>
+                                    <div class="controls">
+                                        <input name="allowed_extensions" type="text" value="gif,jpg,jpeg,png,pdf,txt" id="allowed_extensions" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="max_upload_file_size" class="control-label">Maximum upload file size</label>
+                                    <div class="controls">
+                                        <select id="max_upload_file_size" name="max_upload_file_size" class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                            <option value="1000" selected="selected">1MB</option>
+                                            <option value="2000">2MB</option>
+                                            <option value="3000">3MB</option>
+                                            <option value="4000">4MB</option>
+                                            <option value="5000">5MB</option>
+                                            <option value="6000">6MB</option>
+                                            <option value="7000">7MB</option>
+                                            <option value="8000">8MB</option>
+                                            <option value="9000">9MB</option>
+                                            <option value="10000">10MB</option>
+                                        </select>
+                                        <span class="select2 select2-container select2-container--bootstrap" dir="ltr" style="width: 100%;">
+                                            <span class="selection">
+                                                <span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                                                    aria-expanded="false" tabindex="0" aria-labelledby="select2-max_upload_file_size-container">
+                                                    <span class="select2-selection__rendered" id="select2-max_upload_file_size-container"
+                                                        title="1MB">1MB</span>
+                                        <span class="select2-selection__arrow" role="presentation">
+                                                        <b role="presentation"></b>
+                                                    </span>
+                                        </span>
+                                        </span>
+                                        <span class="dropdown-wrapper" aria-hidden="true"></span>
+                                        </span>
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="minimum_characters" class="control-label">Set minimum characters for user first/last name</label>
+                                    <div class="controls">
+                                        <input name="minimum_characters" type="text" value="3" id="minimum_characters" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="date_format" class="control-label">Date format</label>
+                                    <div class="controls">
+                                        <div class="radio">
+                                            <div class="iradio_minimal-blue checked" style="position: relative;">
+                                                <input checked="checked" name="date_format" type="radio" value="F j,Y" id="date_format" class="icheck" style="position: absolute; opacity: 0;">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                            <label for="true">March 13,2018</label>
+                                        </div>
+                                        <div class="radio">
+                                            <div class="iradio_minimal-blue" style="position: relative;">
+                                                <input name="date_format" type="radio" value="Y-d-m" id="date_format" class="icheck" style="position: absolute; opacity: 0;">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                            <label for="date_format">2018-13-03</label>
+                                        </div>
+                                        <div class="radio">
+                                            <div class="iradio_minimal-blue" style="position: relative;">
+                                                <input name="date_format" type="radio" value="d.m.Y." id="date_format" class="icheck" style="position: absolute; opacity: 0;">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                            <label for="date_format">13.03.2018.</label>
+                                        </div>
+                                        <div class="radio">
+                                            <div class="iradio_minimal-blue" style="position: relative;">
+                                                <input name="date_format" type="radio" value="d.m.Y" id="date_format" class="icheck" style="position: absolute; opacity: 0;">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                            <label for="date_format">13.03.2018</label>
+                                        </div>
+                                        <div class="radio">
+                                            <div class="iradio_minimal-blue" style="position: relative;">
+                                                <input name="date_format" type="radio" value="d/m/Y" id="date_format" class="icheck" style="position: absolute; opacity: 0;">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                            <label for="date_format">13/03/2018</label>
+                                        </div>
+                                        <div class="radio">
+                                            <div class="iradio_minimal-blue" style="position: relative;">
+                                                <input name="date_format" type="radio" value="m/d/Y" id="date_format" class="icheck" style="position: absolute; opacity: 0;">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                            <label for="date_format">03/13/2018</label>
+                                        </div>
+                                        <div class="form-inline">
+                                            <label for="custom_format">Custom format</label>
+                                            <input name="date_format_custom" type="text" value="F j,Y" class="form-control">
+                                        </div>
+                                    </div>
+                                    <span class="help-block"></span>
+                                </div>
+                                <a href="http://php.net/manual/en/function.date.php">Documentation on date and time formatting.</a>
+                                <div class="form-group required ">
+                                    <label for="time_format" class="control-label">Time format</label>
+                                    <div class="controls">
+                                        <div class="radio">
+                                            <div class="iradio_minimal-blue" style="position: relative;">
+                                                <input name="time_format" type="radio" value="g:i a" id="time_format" class="icheck" style="position: absolute; opacity: 0;">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                            <label for="time_format">5:12 am</label>
+                                        </div>
+                                        <div class="radio">
+                                            <div class="iradio_minimal-blue" style="position: relative;">
+                                                <input name="time_format" type="radio" value="g:i A" id="time_format" class="icheck" style="position: absolute; opacity: 0;">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                            <label for="time_format">5:12 AM</label>
+                                        </div>
+                                        <div class="radio">
+                                            <div class="iradio_minimal-blue checked" style="position: relative;">
+                                                <input checked="checked" name="time_format" type="radio" value="H:i" id="time_format" class="icheck" style="position: absolute; opacity: 0;">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                            <label for="time_format">05:12</label>
+                                        </div>
+                                        <div class="form-inline">
+                                            <label for="custom_format">Custom format</label>
+                                            <input name="time_format_custom" type="text" value="H:i" class="form-control">
+                                        </div>
+                                    </div>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                            <div id="email_configuration" class="tab-pane">
+                                <div class="form-group required ">
+                                    <label for="email_driver" class="control-label">Email driver</label>
+                                    <div class="controls">
+                                        <div class="form-inline">
+                                            <div class="radio">
+                                                <div class="iradio_minimal-blue checked" style="position: relative;">
+                                                    <input id="mail" checked="checked" name="email_driver" type="radio" value="mail" class="email_driver icheck" style="position: absolute; opacity: 0;">
+                                                    <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                                </div>
+                                                <label for="true">MAIL</label>
+                                            </div>
+                                            <div class="radio">
+                                                <div class="iradio_minimal-blue" style="position: relative;">
+                                                    <input id="smtp" name="email_driver" type="radio" value="smtp" class="email_driver icheck" style="position: absolute; opacity: 0;">
+                                                    <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                                </div>
+                                                <label for="false">SMTP</label>
+                                            </div>
+                                        </div>
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group smtp required " style="display: none;">
+                                    <label for="email_host" class="control-label">Email server host</label>
+                                    <div class="controls">
+                                        <input name="email_host" type="text" value="" id="email_host" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group smtp required " style="display: none;">
+                                    <label for="email_port" class="control-label">Email server port</label>
+                                    <div class="controls">
+                                        <input name="email_port" type="text" value="" id="email_port" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group smtp required " style="display: none;">
+                                    <label for="email_username" class="control-label">Email server username</label>
+                                    <div class="controls">
+                                        <input name="email_username" type="text" value="" id="email_username" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group smtp required " style="display: none;">
+                                    <label for="email_password" class="control-label">Email server password</label>
+                                    <div class="controls">
+                                        <input name="email_password" type="text" value="" id="email_password" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="payment_configuration" class="tab-pane">
+                                <div class="form-group required ">
+                                    <label for="sales_tax" class="control-label">Sales Tax%</label>
+                                    <div class="controls">
+                                        <input name="sales_tax" type="number" value="13" id="sales_tax" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="payment_term1" class="control-label">Payment Term 1</label>
+                                    <div class="controls">
+                                        <input name="payment_term1" type="number" value="30" id="payment_term1" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="payment_term2" class="control-label">Payment Term 2</label>
+                                    <div class="controls">
+                                        <input name="payment_term2" type="number" value="0" id="payment_term2" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="payment_term3" class="control-label">Payment Term 3</label>
+                                    <div class="controls">
+                                        <input name="payment_term3" type="number" value="3" id="payment_term3" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="opportunities_reminder_days" class="control-label">Opportunities Reminder</label>
+                                    <div class="controls">
+                                        <input name="opportunities_reminder_days" type="number" value="4" id="opportunities_reminder_days" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="contract_renewal_days" class="control-label">Contract Renewal Reminder</label>
+                                    <div class="controls">
+                                        <input name="contract_renewal_days" type="number" value="5" id="contract_renewal_days" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="invoice_reminder_days" class="control-label">Invoice Reminder</label>
+                                    <div class="controls">
+                                        <input name="invoice_reminder_days" type="number" value="6" id="invoice_reminder_days" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="start_number_prefix_configuration" class="tab-pane">
+                                <div class="form-group required ">
+                                    <label for="quotation_prefix" class="control-label">Quotation prefix</label>
+                                    <div class="controls">
+                                        <input name="quotation_prefix" type="text" value="q_" id="quotation_prefix" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="quotation_start_number" class="control-label">Quotation start number</label>
+                                    <div class="controls">
+                                        <input name="quotation_start_number" type="number" value="1" id="quotation_start_number" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="quotation_template" class="control-label">Quotation template</label>
+                                    <div class="controls">
+                                        <select id="quotation_template" name="quotation_template" class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                            <option value="quotation_blue">Blue</option>
+                                            <option value="quotation_green">Green</option>
+                                            <option value="quotation_red_green" selected="selected">Red-Green</option>
+                                        </select>
+                                        <span class="select2 select2-container select2-container--bootstrap" dir="ltr" style="width: 100%;">
+                                            <span class="selection">
+                                                <span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                                                    aria-expanded="false" tabindex="0" aria-labelledby="select2-quotation_template-container">
+                                                    <span class="select2-selection__rendered" id="select2-quotation_template-container"
+                                                        title="Red-Green">Red-Green</span>
+                                        <span class="select2-selection__arrow" role="presentation">
+                                                        <b role="presentation"></b>
+                                                    </span>
+                                        </span>
+                                        </span>
+                                        <span class="dropdown-wrapper" aria-hidden="true"></span>
+                                        </span>
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="sales_prefix" class="control-label">Sales prefix</label>
+                                    <div class="controls">
+                                        <input name="sales_prefix" type="text" value="s_" id="sales_prefix" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="sales_start_number" class="control-label">Sales start number</label>
+                                    <div class="controls">
+                                        <input name="sales_start_number" type="number" value="2" id="sales_start_number" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="saleorder_template" class="control-label">Saleorder template</label>
+                                    <div class="controls">
+                                        <select id="saleorder_template" name="saleorder_template" class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                            <option value="saleorder_blue">Blue</option>
+                                            <option value="saleorder_green">Green</option>
+                                            <option value="saleorder_red_green" selected="selected">Red-Green</option>
+                                        </select>
+                                        <span class="select2 select2-container select2-container--bootstrap" dir="ltr" style="width: 100%;">
+                                            <span class="selection">
+                                                <span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                                                    aria-expanded="false" tabindex="0" aria-labelledby="select2-saleorder_template-container">
+                                                    <span class="select2-selection__rendered" id="select2-saleorder_template-container"
+                                                        title="Red-Green">Red-Green</span>
+                                        <span class="select2-selection__arrow" role="presentation">
+                                                        <b role="presentation"></b>
+                                                    </span>
+                                        </span>
+                                        </span>
+                                        <span class="dropdown-wrapper" aria-hidden="true"></span>
+                                        </span>
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="invoice_prefix" class="control-label">Invoice Prefix</label>
+                                    <div class="controls">
+                                        <input name="invoice_prefix" type="text" value="i_" id="invoice_prefix" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="invoice_start_number" class="control-label">Invoice start number</label>
+                                    <div class="controls">
+                                        <input name="invoice_start_number" type="number" value="3" id="invoice_start_number" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="invoice_template" class="control-label">Invoice template</label>
+                                    <div class="controls">
+                                        <select id="invoice_template" name="invoice_template" class="form-control select2 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                            <option value="invoice_blue">Blue</option>
+                                            <option value="invoice_green" selected="selected">Green</option>
+                                            <option value="invoice_red_green">Red-Green</option>
+                                        </select>
+                                        <span class="select2 select2-container select2-container--bootstrap" dir="ltr" style="width: 100%;">
+                                            <span class="selection">
+                                                <span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                                                    aria-expanded="false" tabindex="0" aria-labelledby="select2-invoice_template-container">
+                                                    <span class="select2-selection__rendered" id="select2-invoice_template-container"
+                                                        title="Green">Green</span>
+                                        <span class="select2-selection__arrow" role="presentation">
+                                                        <b role="presentation"></b>
+                                                    </span>
+                                        </span>
+                                        </span>
+                                        <span class="dropdown-wrapper" aria-hidden="true"></span>
+                                        </span>
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="invoice_payment_prefix" class="control-label">Invoice payment prefix</label>
+                                    <div class="controls">
+                                        <input name="invoice_payment_prefix" type="text" value="ip_" id="invoice_payment_prefix" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="invoice_payment_start_number" class="control-label">Invoice payment start number</label>
+                                    <div class="controls">
+                                        <input name="invoice_payment_start_number" type="number" value="4" id="invoice_payment_start_number" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="pusher_configuration" class="tab-pane">
+                                <div class="form-group required ">
+                                    <label for="pusher_app_id" class="control-label">App ID</label>
+                                    <div class="controls">
+                                        <input name="pusher_app_id" type="text" value="69963" id="pusher_app_id" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="pusher_key" class="control-label">Key</label>
+                                    <div class="controls">
+                                        <input name="pusher_key" type="text" value="66727a1a8043636f77bf" id="pusher_key" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="pusher_secret" class="control-label">Secret</label>
+                                    <div class="controls">
+                                        <input name="pusher_secret" type="text" value="8cb44425dd54374e2b1f" id="pusher_secret" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="paypal_settings" class="tab-pane">
+                                <div class="form-group required ">
+                                    <label for="paypal_testmode" class="control-label">Paypal testmode</label>
+                                    <div class="controls">
+                                        <div class="form-inline">
+                                            <div class="radio">
+                                                <div class="iradio_minimal-blue" style="position: relative;">
+                                                    <input name="paypal_testmode" type="radio" value="true" id="paypal_testmode" class="icheck" style="position: absolute; opacity: 0;">
+                                                    <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                                </div>
+                                                <label for="true">True</label>
+                                            </div>
+                                            <div class="radio">
+                                                <div class="iradio_minimal-blue checked" style="position: relative;">
+                                                    <input checked="checked" name="paypal_testmode" type="radio" value="false" id="paypal_testmode" class="icheck" style="position: absolute; opacity: 0;">
+                                                    <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                                </div>
+                                                <label for="false">False</label>
+                                            </div>
+                                        </div>
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="paypal_username" class="control-label">Paypal username</label>
+                                    <div class="controls">
+                                        <input name="paypal_username" type="text" value="sss" id="paypal_username" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="paypal_password" class="control-label">Paypal password</label>
+                                    <div class="controls">
+                                        <input name="paypal_password" type="text" value="123123" id="paypal_password" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="paypal_signature" class="control-label">Paypal signature</label>
+                                    <div class="controls">
+                                        <input name="paypal_signature" type="text" value="sss" id="paypal_signature" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="stripe_settings" class="tab-pane">
+                                <div class="form-group required ">
+                                    <label for="stripe_publishable" class="control-label">Publishable Key</label>
+                                    <div class="controls">
+                                        <input name="stripe_publishable" type="text" value="sk_test_6pRNASCoBOKtIshFeQd4XMUh" id="stripe_publishable" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group required ">
+                                    <label for="stripe_secret" class="control-label">Secret Key</label>
+                                    <div class="controls">
+                                        <input name="stripe_secret" type="text" value="pk_test_6pRNASCoBOKtIshFeQd4XMUh" id="stripe_secret" class="form-control">
+                                        <span class="help-block"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="backup_configuration" class="tab-pane">
+                                <div>
+                                    <div class="form-group required ">
+                                        <label for="backup_type" class="control-label">Backup Service/Server</label>
+                                        <div class="controls">
+                                            <select name="backup_type" id="backup_type" class="form-control select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                                <option value="local">
+                                                    Local
+                                                </option>
+                                                <option value="dropbox">
+                                                    Dropbox
+                                                </option>
+                                                <option value="s3">
+                                                    Amazon S3
+                                                </option>
+                                            </select>
+                                            <span class="select2 select2-container select2-container--bootstrap" dir="ltr" style="width: 100px;">
+                                                <span class="selection">
+                                                    <span class="select2-selection select2-selection--single" role="combobox"
+                                                        aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-backup_type-container">
+                                                        <span class="select2-selection__rendered" id="select2-backup_type-container"
+                                                            title="
+                                            Local
+                                        ">
+                                                            Local
+                                                        </span>
+                                            <span class="select2-selection__arrow" role="presentation">
+                                                            <b role="presentation"></b>
+                                                        </span>
+                                            </span>
+                                            </span>
+                                            <span class="dropdown-wrapper" aria-hidden="true"></span>
+                                            </span>
+                                            <span class="help-block"></span>
+                                        </div>
+                                    </div>
+                                    <!---->
+                                    <!---->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="controls">
+                            <button type="submit" class="btn btn-success">
+                                <i class="fa fa-check-square-o"></i> OK</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

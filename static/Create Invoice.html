@@ -1,0 +1,296 @@
+<div class="right-content">
+    <section class="box-shadow">
+        <h1>Create Invoice</h1>
+    </section>
+    <div class="right_cont">
+        <div class="page-header clearfix"></div>
+        <div class="panel panel-primary">
+            <div class="panel-body">
+                <form method="POST" action="http://demo.lcrmapp.com/invoice" accept-charset="UTF-8" id="invoice" enctype="multipart/form-data" novalidate="novalidate" class="bv-form">
+                    <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                    <input name="_token" type="hidden" value="fQVZqQ8oROcmY4aRruGMmruuhnPPT67S1nn1UN15">
+                    <div id="sendby_ajax"></div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group required ">
+                                <label for="customer_id" class="control-label required">Agent Name</label>
+                                <div class="controls">
+                                    <select id="customer_id" name="customer_id" class="form-control select2-hidden-accessible" tabindex="-1" aria-hidden="true" data-bv-field="customer_id">
+                                        <option value="" selected="selected">Select Customer</option>
+                                        <option value="3">Customer Doe</option>
+                                        <option value="5">Customer one </option>
+                                        <option value="7">Customer two </option>
+                                        <option value="9">Customer three </option>
+                                    </select>
+                                    <span class="select2 select2-container select2-container--bootstrap" dir="ltr" style="width: 1055px;">
+                                        <span class="selection">
+                                            <span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                                                aria-expanded="false" tabindex="0" aria-labelledby="select2-customer_id-container">
+                                                <span class="select2-selection__rendered" id="select2-customer_id-container">
+                                                    <span class="select2-selection__placeholder">Agent Name</span>
+                                    </span>
+                                    <span class="select2-selection__arrow" role="presentation">
+                                                    <b role="presentation"></b>
+                                                </span>
+                                    </span>
+                                    </span>
+                                    <span class="dropdown-wrapper" aria-hidden="true"></span>
+                                    </span>
+                                    <span class="help-block"></span>
+                                </div>
+                                <small class="help-block" data-bv-validator="notEmpty" data-bv-for="customer_id" data-bv-result="NOT_VALIDATED" style="display: none;">The agent name field is required.</small>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-group required ">
+                                <label for="sales_team_id" class="control-label required">Sales team</label>
+                                <div class="controls">
+                                    <select id="sales_team_id" name="sales_team_id" class="form-control select2-hidden-accessible" tabindex="-1" aria-hidden="true" data-bv-field="sales_team_id"></select>
+                                    <span class="select2 select2-container select2-container--bootstrap" dir="ltr" style="width: 513px;">
+                                        <span class="selection">
+                                            <span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                                                aria-expanded="false" tabindex="0" aria-labelledby="select2-sales_team_id-container">
+                                                <span class="select2-selection__rendered" id="select2-sales_team_id-container">
+                                                    <span class="select2-selection__placeholder">Sales team</span>
+                                    </span>
+                                    <span class="select2-selection__arrow" role="presentation">
+                                                    <b role="presentation"></b>
+                                                </span>
+                                    </span>
+                                    </span>
+                                    <span class="dropdown-wrapper" aria-hidden="true"></span>
+                                    </span>
+                                    <span class="help-block"></span>
+                                </div>
+                                <small class="help-block" data-bv-validator="notEmpty" data-bv-for="sales_team_id" data-bv-result="NOT_VALIDATED" style="display: none;">The sales team field is required.</small>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-group required ">
+                                <label for="sales_person_id" class="control-label required">Main Staff</label>
+                                <div class="controls">
+                                    <select id="sales_person_id" name="sales_person_id" class="form-control select2-hidden-accessible" tabindex="-1" aria-hidden="true" data-bv-field="sales_person_id"></select>
+                                    <span class="select2 select2-container select2-container--bootstrap" dir="ltr" style="width: 513px;">
+                                        <span class="selection">
+                                            <span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                                                aria-expanded="false" tabindex="0" aria-labelledby="select2-sales_person_id-container">
+                                                <span class="select2-selection__rendered" id="select2-sales_person_id-container">
+                                                    <span class="select2-selection__placeholder">Main Staff</span>
+                                    </span>
+                                    <span class="select2-selection__arrow" role="presentation">
+                                                    <b role="presentation"></b>
+                                                </span>
+                                    </span>
+                                    </span>
+                                    <span class="dropdown-wrapper" aria-hidden="true"></span>
+                                    </span>
+                                    <span class="help-block"></span>
+                                </div>
+                                <small class="help-block" data-bv-validator="notEmpty" data-bv-for="sales_person_id" data-bv-result="NOT_VALIDATED" style="display: none;">The main staff field is required.</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group required ">
+                                <label for="qtemplate_id" class="control-label">Quotation template</label>
+                                <div class="controls">
+                                    <select id="qtemplate_id" name="qtemplate_id" class="form-control select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                        <option value="" selected="selected">Select template</option>
+                                    </select>
+                                    <span class="select2 select2-container select2-container--bootstrap" dir="ltr" style="width: 1055px;">
+                                        <span class="selection">
+                                            <span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                                                aria-expanded="false" tabindex="0" aria-labelledby="select2-qtemplate_id-container">
+                                                <span class="select2-selection__rendered" id="select2-qtemplate_id-container">
+                                                    <span class="select2-selection__placeholder">Quotation template</span>
+                                    </span>
+                                    <span class="select2-selection__arrow" role="presentation">
+                                                    <b role="presentation"></b>
+                                                </span>
+                                    </span>
+                                    </span>
+                                    <span class="dropdown-wrapper" aria-hidden="true"></span>
+                                    </span>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-group required ">
+                                <label for="invoice_date" class="control-label required">Invoice date</label>
+                                <div class="controls">
+                                    <input name="invoice_date" type="text" id="invoice_date" class="form-control date" data-bv-field="invoice_date">
+                                    <span class="help-block"></span>
+                                </div>
+                                <small class="help-block" data-bv-validator="notEmpty" data-bv-for="invoice_date" data-bv-result="NOT_VALIDATED" style="display: none;">The invoice date field is required.</small>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-group required ">
+                                <label for="due_date" class="control-label required">Due date</label>
+                                <div class="controls">
+                                    <input name="due_date" type="text" id="due_date" class="form-control" data-bv-field="due_date">
+                                    <span class="help-block"></span>
+                                </div>
+                                <small class="help-block" data-bv-validator="notEmpty" data-bv-for="due_date" data-bv-result="NOT_VALIDATED" style="display: none;">The due date field is required.</small>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-group required ">
+                                <label for="payment_term" class="control-label required">Payment Term</label>
+                                <div class="controls">
+                                    <select name="payment_term" id="payment_term" class="form-control select2-hidden-accessible" tabindex="-1" aria-hidden="true" data-bv-field="payment_term">
+                                        <option value=""></option>
+                                        <option value="30 Days">30 Days</option>
+                                        <option value="3 Days">3 Days</option>
+                                        <option value="0 Days">Immediate payment</option>
+                                    </select>
+                                    <span class="select2 select2-container select2-container--bootstrap" dir="ltr" style="width: 513px;">
+                                        <span class="selection">
+                                            <span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                                                aria-expanded="false" tabindex="0" aria-labelledby="select2-payment_term-container">
+                                                <span class="select2-selection__rendered" id="select2-payment_term-container">
+                                                    <span class="select2-selection__placeholder">Payment Term</span>
+                                    </span>
+                                    <span class="select2-selection__arrow" role="presentation">
+                                                    <b role="presentation"></b>
+                                                </span>
+                                    </span>
+                                    </span>
+                                    <span class="dropdown-wrapper" aria-hidden="true"></span>
+                                    </span>
+                                    <span class="help-block"></span>
+                                </div>
+                                <small class="help-block" data-bv-validator="notEmpty" data-bv-for="payment_term" data-bv-result="NOT_VALIDATED" style="display: none;">The payment term field is required.</small>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-group required ">
+                                <label for="status" class="control-label required">Invoice Status</label>
+                                <div class="controls">
+                                    <div class="input-group">
+                                        <label>
+                                            <div class="iradio_minimal-blue" style="position: relative;">
+                                                <input type="radio" name="status" value="Open Invoice" class="icheckblue" style="position: absolute; opacity: 0;"
+                                                    data-bv-field="status">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                            Open Invoice
+                                        </label>
+                                        <label>
+                                            <div class="iradio_minimal-blue" style="position: relative;">
+                                                <input type="radio" name="status" value="Overdue Invoice" class="icheckblue"
+                                                    style="position: absolute; opacity: 0;" data-bv-field="status">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                            Overdue Invoice
+                                        </label>
+                                        <label>
+                                            <div class="iradio_minimal-blue" style="position: relative;">
+                                                <input type="radio" name="status" value="Paid Invoice" class="icheckblue" style="position: absolute; opacity: 0;"
+                                                    data-bv-field="status">
+                                                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                            </div>
+                                            Paid Invoice
+                                        </label>
+                                    </div>
+                                    <span class="help-block"></span>
+                                </div>
+                                <small class="help-block" data-bv-validator="notEmpty" data-bv-for="status" data-bv-result="NOT_VALIDATED" style="display: none;">The invoice status field is required.</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="control-label required">Products
+                                <span></span>
+                            </label>
+                            <div>
+                                <span class="help-block"></span>
+                            </div>
+                            <div>
+                                <span class="help-block"></span>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr class="detailes-tr">
+                                            <th>Product</th>
+                                            <th>Description</th>
+                                            <th>Quantity</th>
+                                            <th>Unit Price</th>
+                                            <th>Subtotal</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="InputsWrapper"></tbody>
+                                </table>
+                            </div>
+                            <button type="button" id="AddMoreFile" class="btn btn-sm btn-primary">
+                                <i class="fa fa-plus"></i> Add product</button>
+                            <div class="row">&nbsp;</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-group required ">
+                                <label for="total" class="control-label">Total</label>
+                                <div class="controls">
+                                    <input readonly="readonly" name="total" type="text" id="total" class="form-control">
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-group required ">
+                                <label for="tax_amount" class="control-label">Tax Amount (13%)</label>
+                                <div class="controls">
+                                    <input readonly="readonly" name="tax_amount" type="text" id="tax_amount" class="form-control">
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-group required ">
+                                <label for="grand_total" class="control-label">Grand Total</label>
+                                <div class="controls">
+                                    <input readonly="readonly" name="grand_total" type="text" id="grand_total" class="form-control">
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="form-group required ">
+                                <label for="discount" class="control-label">Discount (%)</label>
+                                <div class="controls">
+                                    <input type="text" name="discount" id="discount" value="0.00" onkeyup="update_total_price();" class="form-control number">
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group required ">
+                                <label for="final_price" class="control-label">Final price</label>
+                                <div class="controls">
+                                    <input readonly="readonly" name="final_price" type="text" id="final_price" class="form-control">
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="controls">
+                            <button type="submit" class="btn btn-success">
+                                <i class="fa fa-check-square-o"></i> OK</button>
+                            <a href="http://demo.lcrmapp.com/invoice" class="btn btn-warning">
+                                <i class="fa fa-arrow-left"></i> Back</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
